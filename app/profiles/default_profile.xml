@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<profiles:profiles xmlns:profiles="http://documentation.bonitasoft.com/profile-xml-schema/1.0">
+    <profile name="User" isDefault="true">
+        <description>Ceci est un profil par défaut. Le nom et la description seront traduits dans Bonita Runtime. Ne modifiez pas le nom ou la description.</description>
+        <profileMapping>
+            <users/>
+            <groups/>
+            <memberships/>
+            <roles>
+                <role>member</role>
+            </roles>
+        </profileMapping>
+    </profile>
+    <profile name="Administrator" isDefault="true">
+        <description>Ceci est un profil par défaut. Le nom et la description seront traduits dans Bonita Runtime. Ne modifiez pas le nom ou la description.</description>
+        <profileMapping>
+            <users/>
+            <groups/>
+            <memberships/>
+            <roles>
+                <role>member</role>
+            </roles>
+        </profileMapping>
+    </profile>
+    <profile name="Process manager" isDefault="true">
+        <description>Ceci est un profil par défaut. Le nom et la description seront traduits dans Bonita Runtime. Ne modifiez pas le nom ou la description.</description>
+        <profileMapping>
+            <users/>
+            <groups/>
+            <memberships/>
+            <roles>
+                <role>member</role>
+            </roles>
+        </profileMapping>
+    </profile>
+</profiles:profiles>
