@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/bpm/configuration" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
   <process:MainProcess xmi:id="_7DfhgH5REe6pwoCq5dOJyA" name="MonDiagramme" bonitaModelVersion="8">
     <elements xmi:type="process:Pool" xmi:id="_7DfhgX5REe6pwoCq5dOJyA" name="Pool">
       <elements xmi:type="process:Lane" xmi:id="_7Dfhgn5REe6pwoCq5dOJyA" name="Employé (lane)" actor="_7Dfhm35REe6pwoCq5dOJyA">
@@ -35,6 +35,18 @@
         <condition xmi:type="expression:Expression" xmi:id="_7Dfhmn5REe6pwoCq5dOJyA" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_7Dfhm35REe6pwoCq5dOJyA" documentation="Ceci est un exemple d'acteur associé à tous les utilisateurs d'ACME" name="Employee actor" initiator="true"/>
+      <configurations xmi:type="configuration:Configuration" xmi:id="_AnbrMH5SEe6pwoCq5dOJyA" name="development" version="8">
+        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_AnbrMX5SEe6pwoCq5dOJyA">
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_AnbrMn5SEe6pwoCq5dOJyA" name="Employee actor">
+            <groups xmi:type="actormapping:Groups" xmi:id="_AnbrM35SEe6pwoCq5dOJyA">
+              <group>/acme</group>
+            </groups>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_AnbrNH5SEe6pwoCq5dOJyA"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_AnbrNX5SEe6pwoCq5dOJyA"/>
+            <users xmi:type="actormapping:Users" xmi:id="_AnbrNn5SEe6pwoCq5dOJyA"/>
+          </actorMapping>
+        </actorMappings>
+      </configurations>
       <contract xmi:type="process:Contract" xmi:id="_7DfhnH5REe6pwoCq5dOJyA"/>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_7DfhnX5REe6pwoCq5dOJyA">
         <name xmi:type="expression:Expression" xmi:id="_7Dfhnn5REe6pwoCq5dOJyA" content="" returnTypeFixed="true"/>
