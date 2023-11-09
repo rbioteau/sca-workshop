@@ -1,6 +1,6 @@
 name: build
 on:
-  push:
+  pull_request:
     branches:
       - develop
       - master
@@ -70,12 +70,11 @@ jobs:
           username: ${{ secrets.JFROG_USER }}
           password: ${{ secrets.JFROG_TOKEN }}
       - name: Build
-        run: ./mvnw clean package -Dbonita.environment=development -Pdocker -Ddocker.imageName=ghcr.io/rbioteau/sca-workshop:latest
-      - name: Log in to the Container registry
+        run: ./mvnw clean package -Dbonita.environment=development -Pdocker -Ddocker.imageName=ghcr.io/rbioteau/sca-workshop:${{ github.event.pull_request.number }}
         uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish to docker
-        run: docker push ghcr.io/rbioteau/sca-workshop:latest 
+        run: docker push ghcr.io/rbioteau/sca-workshop:${{ github.event.pull_request.number }} 
