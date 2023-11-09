@@ -81,6 +81,12 @@
       <classifier>application</classifier>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+      <groupId>org.bonitasoft.web.application</groupId>
+      <artifactId>bonita-user-application</artifactId>
+      <type>zip</type>
+      <classifier>application</classifier>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
