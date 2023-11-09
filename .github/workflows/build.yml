@@ -6,7 +6,7 @@ on:
       - master
       - release-*
 jobs:
-  build-and-test:
+  build-and-publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -63,10 +63,6 @@ jobs:
           username: ${{ secrets.JFROG_USER }}
           password: ${{ secrets.JFROG_TOKEN }}
       - name: Build
-        run: ./mvnw clean package -Pdocker
-      - uses: actions/upload-artifact@v2
-        if: failure()
-        with:
-          name: test-results
-          path: extensions/reportingRestAPI/target/*-reports/*
-          retention-days: 5
+        run: ./mvnw clean package -Pdocker -Ddocker.imageName=ghcr.io/rbioteau/sca-workshop:latest
+      - name: Publish to docker push ghcr.io
+        run: docker push ghcr.io/rbioteau/sca-workshop:latest 
