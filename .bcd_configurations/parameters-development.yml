@@ -1,0 +1,8 @@
+---
+processes:
+- name: "Pool"
+  version: "1.0"
+  parameters:
+  - name: "db_host"
+    value: localhost
+    type: "String"
