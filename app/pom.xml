@@ -4,7 +4,7 @@
   <parent>
     <groupId>com.rbioteau.example</groupId>
     <artifactId>sca-workshop-parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>sca-workshop</artifactId>
   <name>sca-workshop</name>
